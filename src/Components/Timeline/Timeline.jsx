@@ -3,7 +3,7 @@ const Timeline = () => {
     return (
         <>
             <div className="timeline" >
-                <div className="timeline-container">
+                <div className="timeline-container left-container">
                     <h1 className="steps">1</h1>
                     <div className="text-box">
                         <h2>Copy the URL</h2>
