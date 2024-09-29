@@ -48,7 +48,6 @@ const Navbar = () => {
             return;
         }
         finally{
-            setlinkerror(false)
             setspinner(false)
         }
     }
