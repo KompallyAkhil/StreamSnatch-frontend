@@ -31,6 +31,10 @@ const Navbar = () => {
             setlinkerror(true);
             return;
         }
+        finally{
+            setlinkerror(false)
+            setspinner(false)
+        }
     }
     async function DownloadFacebook() {
         try {
@@ -43,6 +47,10 @@ const Navbar = () => {
             setlinkerror(true);
             return;
         }
+        finally{
+            setlinkerror(false)
+            setspinner(false)
+        }
     }
     function Convert(event) {
         if(!link){
@@ -51,8 +59,6 @@ const Navbar = () => {
             setspinner(false)
             seterror(true);
             return;
-
-            
         }
         if (!Type) {
             toast.warn("Select a Stream");
@@ -125,7 +131,7 @@ const Navbar = () => {
             {Urlvideo && (
                 <div className="video-container">
                     <h1 className="video-heading">Video Preview</h1>
-                    <video controls src={Urlvideo} type="video/mp4" height={500} width={300} />
+                    <video controls src={Urlvideo} type="video/mp4" height={500} width={700} style={{border:"none"}} />
                     <button className="download-button" onClick={VideoDownload}>Download</button>  
                 </div>
             )}
